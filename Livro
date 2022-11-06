@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author paulojp
+ * @Lilian e @Uanderson Santos
  */
 public class Livro {
     
@@ -15,14 +15,16 @@ public class Livro {
     private String exemplar;
     private String autor;
     private byte edicao;
+    private String editora;
     private short ano;
     private String disponibilidade;
 
-    public Livro(int id, String exemplar, String autor, byte edicao, short ano, String disponibilidade) {
+    public Livro(int id, String exemplar, String editora,String autor, byte edicao, short ano, String disponibilidade) {
         this.id = id;
         this.exemplar = exemplar;
         this.autor = autor;
         this.edicao = edicao;
+        this.editora = editora;
         this.ano = ano;
         this.disponibilidade = disponibilidade;
     }
@@ -60,6 +62,12 @@ public class Livro {
 
     public void setEdicao(byte edicao) {
         this.edicao = edicao;
+    }
+    public String getEditora(){
+       return editora;
+    }
+    public void setEditora(){
+      this.editora = editora;
     }
 
     public short getAno() {
